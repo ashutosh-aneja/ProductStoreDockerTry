@@ -30,7 +30,7 @@ namespace ProductStoreDocker.Controllers
             Product item = repository.Get(id);
             if (item == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                Console.WriteLine("Id not valid");
             }
 
             repository.Remove(id);
